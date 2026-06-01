@@ -1,10 +1,20 @@
 package main
 
 import (
-	"fmt"
 	"ascii/ascii"
+	"fmt"
+	"os"
 )
 
 func main() {
-	fmt.Println(ascii.LoadBanner("standard"))
+
+
+	font := ascii.LoadBanner("standard")
+
+	art := ascii.Render(os.Args[1], font)
+
+	for _, line := range art{
+
+		fmt.Println(line)
+	}
 }
