@@ -63,11 +63,8 @@ func AddBorder(lines []string) []string {
 		}
 	}
 
-	
 
-	border := "+" + strings.Repeat("-", width) + "+"
-
-	
+	border := "+" + strings.Repeat("_", width) + "+"
 	result := []string{border}
 	
 	for _, line := range lines {
@@ -77,3 +74,4 @@ func AddBorder(lines []string) []string {
 	result = append(result, border)
 	return result
 }
+
