@@ -13,6 +13,11 @@ func main() {
 		return
 	}
 
+	if len(os.Args) < 3{
+		fmt.Println("Usage : go run . <text> <color>")
+		return
+	}
+
 	font := ascii.LoadBanner("standard")
 
 	art := ascii.Render(os.Args[1], font)
